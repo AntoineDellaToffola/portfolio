@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>concours</title>
+  <style>
+    :root {
+      --bg-dark: #1e1e1e;
+      --text-color: #ffffff;
+      --accent-pink: #d200aa;
+      --accent-green: #00cc77;
+      --accent-yellow: #ffc700;
+      font-family: 'Courier New', monospace;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom, var(--bg-dark) 0%, #121212 100%);
+      color: var(--text-color);
+      min-height: 100vh;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1.5rem;
+      color: var(--accent-pink);
+    }
+
+    /* Résumé projet */
+    .summary {
+      border: 2px solid var(--accent-pink);
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      max-width: 900px;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 3rem;
+      background-color: rgba(210, 0, 170, 0.1);
+      box-shadow: 0 0 15px rgba(210, 0, 170, 0.4);
+    }
+
+    /* Container photos et vidéo côte à côte */
+    .media-container {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 3rem;
+      max-width: 900px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .media-module {
+      border: 2px solid var(--accent-green);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 204, 119, 0.5);
+      cursor: pointer;
+      transition: box-shadow 0.3s ease;
+      max-width: 400px;
+    }
+
+    .media-module:hover {
+      box-shadow: 0 0 20px var(--accent-green);
+    }
+
+    .media-module img,
+    .media-module video {
+      display: block;
+      height: auto;
+      width: 100%;
+      max-height: 300px;
+      object-fit: contain;
+    }
+
+    /* PDF intégré */
+    .pdf-viewer {
+      width: 90vw;
+      max-width: 900px;
+      height: 600px;
+      border: 2px solid var(--accent-yellow);
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 199, 0, 0.6);
+      overflow: hidden;
+      margin-bottom: 3rem;
+    }
+
+    .pdf-viewer iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Bouton retour */
+    .back-link {
+      margin-top: 2rem;
+      font-size: 1.4rem;
+    }
+
+    .back-link a {
+      color: #aaa;
+      text-decoration: none;
+      position: relative;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      display: inline-block;
+    }
+
+    .back-link a:hover {
+      text-decoration: none;
+    }
+
+    .brackets {
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-weight: bold;
+      color: #aaa;
+      pointer-events: none;
+    }
+
+    .back-link a:hover .brackets {
+      opacity: 1;
+    }
+
+    .back-link a .brackets:first-child {
+      left: 0;
+    }
+
+    .back-link a .brackets:last-child {
+      right: 0;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>console.log("Concours mon projet en 5min")</h1>
+
+  <div class="summary">
+    <p>
+      &lt; Je vous présente ici notre participation au concours de projets inter-académique (université/ingé) où nous avons terminé en final, organisé par le préstigieux club EEA à Paris. &gt;
+    </p>
+  </div>
+
+  <div class="media-container">
+    <div class="media-module">
+      <img src="concours.jpg" alt="Photo 1 du projet" />
+    </div>
+    <div class="media-module">
+      <video controls>
+        <source src="vfinal modifiee V2.mp4" type="video/mp4" />
+        Votre navigateur ne supporte pas la lecture vidéo.
+      </video>
+    </div>
+  </div>
+
+  <div class="pdf-viewer">
+    <iframe src="PPT finale concours 5 min ESS.pdf" allowfullscreen></iframe>
+  </div>
+
+  <div class="back-link">
+    <a href="projets.html"><span class="brackets">[</span> &larr; Retour aux projets <span class="brackets">]</span></a>
+  </div>
+</body>
+</html>

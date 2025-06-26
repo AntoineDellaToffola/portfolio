@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projets</title>
+  <style>
+    :root {
+      --bg-dark: #1e1e1e;
+      --text-color: #fff;
+      --accent-green: #00cc77;
+      --accent-pink: #d200aa;
+      --accent-yellow: #ffc700;
+      font-family: 'Courier New', monospace;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom, #1e1e1e 0%, #121212 100%);
+      color: var(--text-color);
+      min-height: 100vh;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      color: var(--accent-yellow);
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .comment {
+      color: #7f848e;
+      font-style: italic;
+      margin-bottom: 2rem;
+      max-width: 900px;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .project-card {
+      background-color: #2d2d2d;
+      border-radius: 10px;
+      border: 2px solid var(--accent-green);
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      box-shadow: 0 0 15px var(--accent-green);
+      border-color: var(--accent-pink);
+    }
+
+    .project-image {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      background-color: #111;
+    }
+
+    .project-title {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      color: var(--accent-pink);
+      min-height: 2.2em;
+    }
+
+    .btn {
+      padding: 0.6rem 1.2rem;
+      background-color: var(--accent-green);
+      color: black;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      font-family: monospace;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: var(--accent-pink);
+      color: white;
+      box-shadow: 0 0 8px var(--accent-pink);
+    }
+
+    .back-link {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+    }
+
+    .back-link a {
+      color: #aaa;
+      text-decoration: none;
+      position: relative;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      display: inline-block;
+    }
+
+    .back-link a:hover {
+      text-decoration: none;
+    }
+
+    .brackets {
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-weight: bold;
+      color: #aaa;
+      pointer-events: none;
+    }
+
+    .back-link a:hover .brackets {
+      opacity: 1;
+    }
+
+    .back-link a .brackets:first-child {
+      left: 0;
+    }
+
+    .back-link a .brackets:last-child {
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>console.log("Projets")</h1>
+  <p class="comment">// Tous les projets universitaires sont regroupés ici</p>
+  <div class="grid">
+    <div class="project-card">
+      <img src="systemeHydropo.jpg" alt="Système hydroponique" class="project-image" />
+      <div class="project-title">Système hydroponique</div>
+      <a href="projet_hydro.html" class="btn">Voir le projet</a>
+    </div>
+
+    <div class="project-card">
+      <img src="projet5min.png" alt="Concours mon projet en 5min" class="project-image" />
+      <div class="project-title">Concours mon projet en 5min</div>
+      <a href="projet5min.html" class="btn">Voir le projet</a>
+    </div>
+
+    <div class="project-card">
+      <img src="anemo.png" alt="Mini projet Anemo" class="project-image" />
+      <div class="project-title">Mini projet Anemo</div>
+      <a href="projet_anemo.html" class="btn">Voir le projet</a>
+    </div>
+
+    <div class="project-card">
+      <img src="jumeaunum.png" alt="Jumeau numérique" class="project-image" />
+      <div class="project-title">Jumeau numérique</div>
+      <a href="jumeau.html" class="btn">Voir le projet</a>
+    </div>
+
+    <div class="project-card">
+      <img src="simuHydro.png" alt="Système hydroponique simulé" class="project-image" />
+      <div class="project-title">Système hydroponique simulé</div>
+      <a href="hydrosimu.html" class="btn">Voir le projet</a>
+    </div>
+
+    <div class="project-card">
+      <img src="optiSolaire.png" alt="SmartGradator" class="project-image" />
+      <div class="project-title">SmartGradator</div>
+      <a href="smartgradator.html" class="btn">Voir le projet</a>
+    </div>
+	
+    <div class="project-card">
+      <img src="recherchepanne.png" alt="Recherche de panne" class="project-image" />
+      <div class="project-title">Recherche de panne</div>
+      <a href="recherchepanne.html" class="btn">Voir le projet</a>
+    </div>
+
+    <div class="project-card">
+      <img src="abilis.png" alt="Armoir ABILIS" class="project-image" />
+      <div class="project-title">Armoir ABILIS</div>
+      <a href="abilis.html" class="btn">Voir le projet</a>
+    </div>
+
+    <div class="project-card">
+      <img src="bob.jpg" alt="Bob le robot" class="project-image" />
+      <div class="project-title">Bob le robot</div>
+      <a href="bob.html" class="btn">Voir le projet</a>
+    </div>
+
+    <div class="project-card">
+      <img src="smartlight.png" alt="SmartLight" class="project-image" />
+      <div class="project-title">SmartLight</div>
+      <a href="smartlight.html" class="btn">Voir le projet</a>
+    </div>
+	
+    <div class="project-card">
+      <img src="platineVerif.png" alt="Platine de vérification" class="project-image" />
+      <div class="project-title">Platine de vérification</div>
+      <a href="platineverif.html" class="btn">Voir le projet</a>
+    </div>
+
+    <div class="project-card">
+      <img src="ihm.png" alt="Commande moteur" class="project-image" />
+      <div class="project-title">Commande moteur</div>
+      <a href="cmdmoteur.html" class="btn">Voir le projet</a>
+    </div>
+
+    <div class="project-card">
+      <img src="telecommandeSonore.jpg" alt="Télécommande sonore" class="project-image" />
+      <div class="project-title">Télécommande sonore</div>
+      <a href="#" class="btn">Voir le projet</a>
+    </div>
+
+  </div>
+
+  <div class="back-link">
+    <a href="experiences.html"><span class="brackets">[</span> &larr; Retour aux expériences <span class="brackets">]</span></a>
+  </div>
+</body>
+</html>

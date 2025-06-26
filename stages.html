@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stages</title>
+  <style>
+    :root {
+      --bg-dark: #1e1e1e;
+      --text-color: #ffffff;
+      --accent-green: #00cc77;
+      --accent-yellow: #ffc700;
+      --accent-pink: #d200aa;
+      font-family: 'Courier New', monospace;
+    }
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom, #1e1e1e 0%, #121212 100%);
+      color: var(--text-color);
+      min-height: 100vh;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      color: var(--accent-pink);
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+    }
+    .comment {
+      color: #7f848e;
+      font-style: italic;
+      margin-bottom: 2rem;
+      max-width: 900px;
+      text-align: center;
+    }
+    .container {
+      display: flex;
+      gap: 2rem;
+      max-width: 900px;
+      width: 100%;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .stage-card {
+      background-color: #2d2d2d;
+      border-radius: 10px;
+      border: 2px solid var(--accent-yellow);
+      padding: 1rem;
+      flex: 1 1 40%;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: box-shadow 0.3s ease;
+    }
+    .stage-card:hover {
+      box-shadow: 0 0 15px var(--accent-yellow);
+      border-color: var(--accent-green);
+    }
+    .stage-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      background-color: #111;
+    }
+    .stage-title {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: var(--accent-yellow);
+      min-height: 2.4em;
+    }
+    .btn {
+      padding: 0.6rem 1.2rem;
+      background-color: var(--accent-green);
+      color: black;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      font-family: monospace;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn:hover {
+      background-color: var(--accent-yellow);
+      color: black;
+      box-shadow: 0 0 8px var(--accent-yellow);
+    }
+    .back-link {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+    }
+    .back-link a {
+      color: #aaa;
+      text-decoration: none;
+      position: relative;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      display: inline-block;
+    }
+    .back-link a:hover {
+      text-decoration: none;
+    }
+    .brackets {
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-weight: bold;
+      color: #aaa;
+      pointer-events: none;
+    }
+    .back-link a:hover .brackets {
+      opacity: 1;
+    }
+    .back-link a .brackets:first-child {
+      left: 0;
+    }
+    .back-link a .brackets:last-child {
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>console.log("Stages")</h1>
+  <p class="comment">// Voici mes mes experiences de stages</p>
+  <div class="container">
+    <div class="stage-card">
+      <img src="logoifremer.jpg" alt="Stage 1" class="stage-image" />
+      <div class="stage-title">Stage Electronicien</div>
+      <a href="stage1.html" class="btn">Voir le stage</a>
+    </div>
+    <div class="stage-card">
+      <img src="logomgp.png" alt="Stage 2" class="stage-image" />
+      <div class="stage-title">Stage Electrotechnicien</div>
+      <a href="stage2.html" class="btn">Voir le stage</a>
+    </div>
+  </div>
+  <div class="back-link">
+    <a href="experiences.html"><span class="brackets">[</span> &larr; Retour aux expériences <span class="brackets">]</span></a>
+  </div>
+</body>
+</html>

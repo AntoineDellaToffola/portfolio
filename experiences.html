@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expériences</title>
+  <style>
+    :root {
+      --bg-dark: #1e1e1e;
+      --text-color: #ffffff;
+      --accent-green: #00cc77;
+      --accent-yellow: #ffc700;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom, #1e1e1e 0%, #121212 100%);
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 0 2rem;
+    }
+
+    h1 {
+      color: var(--accent-green);
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .comment {
+      color: #7f848e;
+      font-style: italic;
+      margin-bottom: 2rem;
+    }
+
+    .modules {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .modules a {
+      color: var(--accent-yellow);
+      text-decoration: none;
+      border: 2px solid var(--accent-yellow);
+      padding: 1.8rem 3.5rem;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      font-weight: bold;
+      background-color: rgba(255, 199, 0, 0.1);
+    }
+
+    .modules a:hover {
+      background-color: var(--accent-yellow);
+      color: black;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 18px rgba(255, 199, 0, 0.6);
+      text-shadow: 0 0 8px rgba(255, 199, 0, 0.7);
+    }
+
+    .back-link {
+      margin-top: 3rem;
+      font-size: 1.4rem;
+    }
+
+    .back-link a {
+      color: #aaa;
+      text-decoration: none;
+    }
+
+    .back-link a:hover {
+      text-decoration: none;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      height: 1.2em;
+      background-color: var(--text-color);
+      margin-left: 4px;
+      animation: blink 1s steps(2, start) infinite;
+      vertical-align: bottom;
+    }
+
+    @keyframes blink {
+      to {
+        visibility: hidden;
+      }
+    }
+
+    .brackets {
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+    .back-link a:hover .brackets {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <h1>console.log("Expériences")<span class="cursor"></span></h1>
+  <p class="comment">// Sélectionnez un module :</p>
+  <div class="modules">
+    <a href="projets.html">Projets</a>
+    <a href="stages.html">Stages</a>
+  </div>
+  <div class="back-link">
+    <a href="index.html"><span class="brackets">[</span> &larr; Retour à l'accueil <span class="brackets">]</span></a>
+  </div>
+</body>
+</html>

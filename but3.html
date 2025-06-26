@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compétences - BUT 3</title>
+  <style>
+    :root {
+      --bg-dark: #1e1e1e;
+      --text-color: #ffffff;
+      --accent-green: #00cc77;
+      --accent-pink: #d200aa;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom, #1e1e1e 0%, #121212 100%);
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+    h1 {
+      color: var(--accent-green);
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+    .comment {
+      color: #7f848e;
+      font-style: italic;
+      margin-bottom: 2rem;
+    }
+    .competence-block {
+      width: 100%;
+      max-width: 900px;
+      margin-bottom: 3rem;
+    }
+    .competence-title {
+      font-size: 1.6rem;
+      color: var(--accent-pink);
+      margin-bottom: 1rem;
+    }
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .projects a {
+      color: var(--accent-green);
+      text-decoration: none;
+      border: 2px solid var(--accent-green);
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      font-weight: bold;
+      background-color: rgba(0, 204, 119, 0.1);
+    }
+    .projects a:hover {
+      background-color: var(--accent-green);
+      color: black;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 18px rgba(0, 204, 119, 0.6);
+      text-shadow: 0 0 8px rgba(0, 204, 119, 0.7);
+    }
+    .back-link {
+      margin-top: 2rem;
+      font-size: 1.4rem;
+    }
+    .back-link a {
+      color: #aaa;
+      text-decoration: none;
+    }
+    .brackets {
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+    .back-link a:hover .brackets {
+      opacity: 1;
+    }
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      height: 1.2em;
+      background-color: var(--text-color);
+      margin-left: 4px;
+      animation: blink 1s steps(2, start) infinite;
+      vertical-align: bottom;
+    }
+    @keyframes blink {
+      to {
+        visibility: hidden;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>console.log("Compétences - BUT 3")<span class="cursor"></span></h1>
+  <p class="comment">// Les projets triés par compétences universitaires :</p>
+
+  <div class="competence-block">
+    <div class="competence-title">Concevoir – niveau 3</div>
+    <div class="projects">
+      <a href="jumeau.html">Jumeau numérique</a>
+      <a href="projet_anemo.html">Mini projet Anemo</a>
+      <a href="projet_hydro.html">Système hydroponique</a>
+    </div>
+  </div>
+
+  <div class="competence-block">
+    <div class="competence-title">Vérifier – niveau 3</div>
+    <div class="projects">
+      <a href="jumeau.html">Jumeau numérique</a>
+      <a href="projet_hydro.html">Système hydroponique</a>
+    </div>
+  </div>
+
+  <div class="competence-block">
+    <div class="competence-title">Maintenir – niveau 2</div>
+    <div class="projects">
+      <a href="jumeau.html">Jumeau numérique</a>
+      <a href="projet_hydro.html">Système hydroponique</a>
+    </div>
+  </div>
+
+  <div class="competence-block">
+    <div class="competence-title">Intégrer – niveau 2</div>
+    <div class="projects">
+      <a href="jumeau.html">Jumeau numérique</a>
+      <a href="projet_anemo.html">Mini projet Anemo</a>
+      <a href="projet_hydro.html">Système hydroponique</a>
+    </div>
+  </div>
+
+  <div class="back-link">
+    <a href="competences.html"><span class="brackets">[</span> &larr; Retour aux compétences <span class="brackets">]</span></a>
+  </div>
+</body>
+</html>
